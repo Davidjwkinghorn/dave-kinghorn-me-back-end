@@ -23,7 +23,7 @@ router.delete('/quotes/:id', (req, res, next) => {
 	Quote.findOneAndDelete({"_id": req.params.id})
 	.then(data => res.json(data))
 	.catch(next)
-})
+});
 
 module.exports = router;
 
